@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -116,7 +116,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+# this is used to run
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+print('Site root : ' + SITE_ROOT)
+print(BASE_DIR)
+STATICFILES_DIRS = (os.path.join(SITE_ROOT, 'static/'),)
+# STATICFILES_DIR = [os.path.join(BASE_DIR,'carzone/static'),]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
