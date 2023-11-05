@@ -176,3 +176,9 @@ cython_debug/
 /media
 /static
 static/
+pages/__pycache__/urls.cpython-312.pyc
+pages/__pycache__/views.cpython-312.pyc
+carzone/__pycache__/settings.cpython-312.pyc
+pages/__pycache__/urls.cpython-312.pyc
+pages/__pycache__/views.cpython-312.pyc
+carzone/__pycache__/settings.cpython-312.pyc

@@ -120,7 +120,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 # this is used to run
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
@@ -128,6 +127,10 @@ print('Site root : ' + SITE_ROOT)
 print(BASE_DIR)
 STATICFILES_DIRS = (os.path.join(SITE_ROOT, 'static/'),)
 # STATICFILES_DIR = [os.path.join(BASE_DIR,'carzone/static'),]
+
+# Media Settings
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
